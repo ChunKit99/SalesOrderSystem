@@ -1,16 +1,18 @@
 package uml;
 
-public class Customer {
+public class Customer extends User{
 	private String name;
-	private Address address;
+	private String address;
 	private String Contact;
-	private boolean active = true;
-	public Customer(String name, Address address, String contact, boolean active) {
+	public Customer() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Customer(String username, String password, int type, String name, String address, String contact) {
+		super(username, password, type);
 		this.name = name;
 		this.address = address;
 		Contact = contact;
-		this.active = active;
 	}
 	public String getName() {
 		return name;
@@ -18,10 +20,10 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Address getAddress() {
+	public String getAddress() {
 		return address;
 	}
-	public void setAddress(Address address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
 	public String getContact() {
@@ -29,12 +31,6 @@ public class Customer {
 	}
 	public void setContact(String contact) {
 		Contact = contact;
-	}
-	public boolean isActive() {
-		return active;
-	}
-	public void setActive(boolean active) {
-		this.active = active;
 	}
 	
 	

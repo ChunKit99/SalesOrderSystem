@@ -1,15 +1,25 @@
 package uml;
 
 public class Item {
+	private String id;
 	private double price;
 	private double weight;
 	private String description;
 
-	public Item(double price, double weight, String description) {
+	public Item(String id, double price, double weight, String description) {
 		super();
+		this.id = id;
 		this.price = price;
 		this.weight = weight;
 		this.description = description;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public double getPrice() {
